@@ -1,0 +1,347 @@
+@font-face {
+    font-family: ingiri;
+    src: url('fonts/BPG_Ingiri_GPL&GNU.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: dejavu;
+    src: url('fonts/BPG DejaVuSans-Bold_2s.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.clear {
+  *zoom: 1;
+}
+
+.clear:before, .clear:after {
+  display: table;
+  line-height: 0;
+  content: "";
+}
+
+.clear:after {
+  clear: both;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
+body {
+  background: #6bccd1;
+  font-size: 13px;
+  font-family: ingiri, arial;
+}
+
+
+#clock-bg, #clock-inner {
+  width: 411px;
+  height: 411px;
+  position: absolute;
+  z-index: 1;
+  top: 75px;
+  left: 66px;
+}
+
+#clock-bg {
+  background: url(images/clock.png) center center no-repeat;
+}
+
+#clock-inner .imgc {
+  width: 100%;
+  margin-top: 11%;
+  height: 72%;
+}
+
+#clock-inner .controls {
+  width: 100%;
+  margin-top: 0%;
+  height: 10%;
+}
+
+#clock-inner .imgc .inner {
+  height: 100%;
+  display: table;
+  margin: 0 auto;
+}
+
+#clock-inner .imgc .inner .img {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#clock-inner .controls .inner {
+  margin: 0 auto;
+  display: table;
+  height: 100%;
+}
+
+#clock-inner .controls .inner .cc {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#clock-inner .controls .cc div {
+  width: 29px;
+  height: 19px;
+  margin-right: 5px;
+  float: left;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+#clock-inner .controls .left {
+  background-image: url('images/button_left.png');
+}
+
+#clock-inner .controls .left:hover {
+  background-image: url('images/button_left_hover.png');
+}
+
+#clock-inner .controls .play {
+  background-image: url('images/button_play.png');
+}
+
+#clock-inner .controls .play:hover {
+  background-image: url('images/button_play_hover.png');
+}
+
+#clock-inner .controls .pause {
+  background-image: url('images/button_pause.png');
+}
+
+#clock-inner .controls .pause:hover {
+  background-image: url('images/button_pause_hover.png');
+}
+
+#clock-inner .controls div.right {
+  margin-right: 0px;
+  background-image: url('images/button_right.png');
+}
+
+#clock-inner .controls .right:hover {
+  background-image: url('images/button_right_hover.png');
+}
+
+
+#clock {
+  margin-top: 53px;
+  position: relative;
+  width: 543px;
+  height: 554px;
+}
+
+#clock .h > div {
+  visibility: hidden;
+  position: absolute;
+  z-index: 2;
+  cursor: pointer;
+}
+
+#clock .h > div.loaded {
+  visibility: visible;
+}
+
+#clock .h > div img {
+  display: block;
+}
+
+#clock .h > div.loaded img {
+  position: absolute;
+  -webkit-transition: opacity .5s;
+     -moz-transition: opacity .5s;
+       -o-transition: opacity .5s;
+          transition: opacity .5s;
+}
+
+#clock .h > div.active img:first-child, #clock .h > div:hover img:first-child, #clock .h div img:last-child {
+  display: none;
+}
+
+#clock .h > div.active.loaded img:first-child, #clock .h > div.loaded:hover img:first-child, #clock .h div.loaded img:last-child {
+  display: block;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+#clock .h > div.active img:last-child, #clock .h > div:hover img:last-child {
+  display: block;
+  opacity: 1;
+  filter: alpha(opacity=100);
+}
+
+#clock, #content {
+  float: left;
+}
+
+#content {
+  width: 467px;
+  margin: 103px 0px 0px 50px;
+}
+
+#content .locale {
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+a {
+  outline: none;
+}
+
+#content .locale a {
+  text-decoration: none;
+  color: #fff;
+  margin-right: 19px;
+  font-size: 14px;
+}
+
+#content .locale a:hover {
+  color: #000100;
+}
+
+#content .header {
+}
+
+#content .header a {
+  color: #6bccd1;
+  display: block;
+  font-family: dejavu;
+}
+
+#content .header a > * {
+  float: left;
+}
+
+#content .header a > div {
+}
+
+#content .header a > div:nth-child(2) {
+  height: 56px;
+  line-height: 56px;
+  width: 405px;
+  padding-left: 11px;
+  background: #fff;
+  font-size: 21px;
+  text-transform: uppercase;
+}
+
+#content .header a > div:nth-child(2).en {
+  font-size: 15px;
+}
+
+#content .header a > div:first-child, #content .header a > div:last-child {
+  width: 0px;
+  height: 0px;
+}
+
+#content .header a > div:first-child {
+  border-right: 32px solid #fff;
+  border-bottom: 56px solid transparent;
+}
+
+#content .header a > div:last-child {
+  border-right: 19px solid transparent;
+  border-bottom: 28px solid #fff;
+  border-top: 28px solid #fff;
+}
+
+#content .body {
+  padding-left: 42px;
+  margin-top: 23px;
+  color: #231f20;
+}
+
+#content .subheader {
+  font-family: dejavu;
+  margin-bottom: 17px;
+  font-size: 15px;
+  text-transform: uppercase;
+}
+
+#content .body .text {
+  font-size: 14px;
+  line-height: 23px;
+}
+
+#content .body .text ul {
+  list-style-type: disc;
+  margin-left: 25px;
+}
+
+#content .body .text .positive ul {
+  list-style-image: url(images/smile_positive.png);
+}
+
+#content .body .text .negative ul {
+  list-style-image: url(images/smile_negative.png);
+}
+
+#content .body .text li {
+}
+
+
+
+
+
+
+
+
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+#wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+#wrapper > .container {
+  padding-bottom: 35px;
+}
+
+.footer {
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  height: 35px;
+}
+
+.footer a, .footer img {
+  border:none;
+}
+
+.footer .logo {
+  float: right;
+}
+
+.footer .logo a {
+  display: block;
+  float: left;
+  margin-right: 35px;
+}
+
+.footer .logo .wheel {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  overflow: hidden;
+  width: 35px;
+  height: 35px;
+}
+
+
+
+

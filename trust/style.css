@@ -1,0 +1,315 @@
+@font-face {
+    font-family: ingiri;
+    src: url('fonts/BPG_Ingiri_GPL&GNU.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: dejavu;
+    src: url('fonts/BPG DejaVuSans-Bold_2s.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body{
+  background-color: #c2c2c2;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+  font-family: ingiri, arial;
+}
+html{
+ overflow-y: scroll;
+}
+#header_container{
+  padding-bottom: 20px;
+  color: #666666;
+  background-color: #e6e6e6;
+  padding: 20px;
+}
+#header_container h1 {
+  font-family: dejavu;
+  font-weight: normal;
+  font-size: 32px;
+  text-transform:uppercase;
+}
+#header_container h1 img{
+  vertical-align: middle;
+  margin-right: 10px;
+}
+#header_container .locale{
+  float: right;
+  font-family: dejavu;
+  margin-top: 35px;
+  font-size: 19px;
+}
+#header_container .locale a{
+  text-decoration: none;
+  color: #666666;
+}
+
+#container{
+  background-color: #e6e6e6;
+  padding: 0 20px;
+}
+#container #chart_nav{
+  float: left;
+  width: 200px;
+  height: 300px;
+}
+#container #chart_nav ul {
+  padding-left: 0;
+  height: 100%;
+  margin: 0 10px 0 0;
+}
+#container #chart_nav ul li{
+  list-style-type: none;
+  display: block;
+  height: 63px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  text-transform:uppercase;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -khtml-border-radius: 3px;
+}
+
+#container #chart_nav ul li:nth-child(1) {
+  -moz-box-shadow:    2px 2px 0px 0 #1a8b5e;
+  -webkit-box-shadow: 2px 2px 0px 0 #1a8b5e;
+  box-shadow:         2px 2px 0px 0 #1a8b5e;
+}
+
+#container #chart_nav ul li:nth-child(2) {
+  -moz-box-shadow:    2px 2px 0px 0 #ce4646;
+  -webkit-box-shadow: 2px 2px 0px 0 #ce4646;
+  box-shadow:         2px 2px 0px 0 #ce4646;
+}
+
+#container #chart_nav ul li:nth-child(3) {
+  -moz-box-shadow:    2px 2px 0px 0 #3c5268;
+  -webkit-box-shadow: 2px 2px 0px 0 #3c5268;
+  box-shadow:         2px 2px 0px 0 #3c5268;
+}
+
+#container #chart_nav ul li:nth-child(4) {
+  -moz-box-shadow:    2px 2px 0px 0 #505251;
+  -webkit-box-shadow: 2px 2px 0px 0 #505251;
+  box-shadow:         2px 2px 0px 0 #505251;
+}
+
+#container #chart_nav ul li.active, #main_chart svg {
+  -moz-box-shadow:    2px 2px 0px 0 #cfcfcf;
+  -webkit-box-shadow: 2px 2px 0px 0 #cfcfcf;
+  box-shadow:         2px 2px 0px 0 #cfcfcf;
+}
+
+#container #chart_nav ul li:last-child {
+  margin-bottom: 0px;
+}
+#container #chart_nav ul li a img{
+  vertical-align: middle;
+  margin-right: 0px;
+}
+#container #chart_nav ul li#trust {
+  margin-top: 0;
+  background-color: #23a570;
+}
+#container #chart_nav ul li#distrust {
+  background-color: #db5d5d;
+}
+#container #chart_nav ul li#partial {
+  background-color: #48617a;
+}
+#container #chart_nav ul li#not_know {
+  background-color: #666666;
+}
+#container #chart_nav ul li.active {
+  margin-top: 0;
+  background-color: #fff !important;
+  margin-right: -10px;
+  -moz-border-radius-topright: 0;
+  -moz-border-radius-bottomright: 0;
+  -webkit-border-top-right-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+}
+
+#container #chart_nav ul li a{
+  padding: 0px 0px 0px 10px;
+  display: block;
+  outline: none;
+  width: 100%;
+  height: 63px;
+  line-height: 63px;
+  vertical-align: middle;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+#container #chart_nav ul li a .img{
+  display: inline-block;
+  width: 30px;
+}
+
+#container #chart_nav ul li#partial a{
+  padding-top: 2px;
+}
+
+#container #chart_nav ul li#trust.active a {
+  color: #23a570;
+}
+#container #chart_nav ul li#distrust.active a {
+  color: #db5d5d;
+}
+#container #chart_nav ul li#partial.active a {
+  color: #48617a;
+}
+#container #chart_nav ul li#not_know.active a {
+  color: #666666;
+}
+
+
+#container #chart_container{
+  float: left;
+  min-width: 600px; 
+  height: 360px; 
+  margin: 0 auto;
+/*  background-color: #fff;*/
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -khtml-border-radius: 3px;
+}
+#container #chart_container #main_chart{
+  min-width: 600px; 
+  height: 400px; 
+}
+
+#container #explanation{
+  margin: 0 0 0 10px ;
+  float: left;
+  width: 300px;
+  height: 300px;
+  background-color: #fff;
+  padding: 0 10px;
+  font-size: 14px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -khtml-border-radius: 3px;
+}
+
+#container:after, #bottom_container:after{
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+#bottom_container{
+  margin-top: 15px;
+  text-align: center;
+}
+#bottom_container > div {
+  display: inline-block;
+  margin: 30px 0 30px 15px;  
+  font-size: 12px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -khtml-border-radius: 3px;
+}
+#bottom_container > div > img{
+  width: 100%;
+}
+
+#bottom_container > div:first-of-type {
+  margin-left: 0;  
+}
+
+
+
+#tooltip {
+  position: absolute;
+  display: none;
+}
+
+#tooltip .chart {
+  width: 220px;
+  height: 150px;
+}
+
+#tooltip .before {
+  margin: 0 auto;
+  width: 0px;
+  display: block;
+  border: 7px solid transparent;
+  border-bottom-color: #fff;
+  border-top: none;
+}
+
+#wrapper {
+  min-height: 100%;
+  position: relative;
+}
+
+#wrapper > .container {
+  padding-bottom: 35px;
+}
+
+.footer {
+  display: block;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  height: 35px;
+}
+
+.footer #source {
+  float: left;
+  margin-left: 35px;
+}
+.footer #source a {
+  text-decoration: none;
+  color: #195dbf;
+}
+
+.footer .logo {
+  float: right;
+}
+
+.footer .logo a {
+  display: block;
+  float: left;
+  margin-right: 35px;
+}
+
+.footer .logo .wheel {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  overflow: hidden;
+  width: 35px;
+  height: 35px;
+}
+
+.footer a, .footer img, #container #chart_nav ul li a, #container #chart_nav ul li a img {
+  border:none;
+}
+
+
+@media (max-width: 1169px) {
+  #container #explanation{
+    width: 100%;
+    height: auto;
+    margin: 0 20px 20px 0;
+    padding: 0 10px;
+  }
+}
+
+
